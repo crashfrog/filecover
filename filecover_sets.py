@@ -22,6 +22,7 @@ for filename, gene_set in minimum_set.copy().items():
     if filename not in f:
       total_set = total_set.union(s)
   if len(total_set) == len(universe):
+    #if removing a set wouldn't reduce the size of the universe, take it out
     if filename in minimum_set:
       del minimum_set[filename]
 
